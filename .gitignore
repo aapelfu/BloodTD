@@ -1,0 +1,11 @@
+# Godot
+.godot/
+*.translation
+export_presets.cfg
+
+# Importaciones temporales
+.import/
+
+# Builds
+build/
+export/
