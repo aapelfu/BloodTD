@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://gblfd4hakvxj"]
+
+[ext_resource type="Texture2D" uid="uid://cr36mfm2h3woa" path="res://assets/sprites/towers/tower_01/Tower 01 - Level 01 - Projectile.png" id="1_fmodo"]
+[ext_resource type="Script" uid="uid://b5b3leqrb7cet" path="res://scripts/proyectil.gd" id="1_w2e24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmodo"]
+size = Vector2(22, 44)
+
+[node name="Proyectil" type="Area2D" unique_id=973668681]
+script = ExtResource("1_w2e24")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1266526205]
+texture = ExtResource("1_fmodo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=67965126]
+shape = SubResource("RectangleShape2D_fmodo")

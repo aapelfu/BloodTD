@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://cc1yn7ia3vofc" path="res://assets/sprites/hunter/_Idle.png" id="5_6yxys"]
 [ext_resource type="Texture2D" uid="uid://jiomawl7vu0a" path="res://assets/sprites/hunter/_Run.png" id="6_gr1sx"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_as8jt"]
+radius = 13.673409
+height = 38.666668
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_lr0sv"]
 atlas = ExtResource("2_grkc3")
 region = Rect2(0, 0, 120, 80)
@@ -280,21 +284,17 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_as8jt"]
-radius = 13.673409
-height = 38.666668
-
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1400084472]
-scale = Vector2(3, 3)
+scale = Vector2(5, 5)
 script = ExtResource("1_as8jt")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1147530953]
-texture_filter = 1
-position = Vector2(5.833335, -20.666668)
-scale = Vector2(0.99722224, 1)
-sprite_frames = SubResource("SpriteFrames_l6gn3")
-animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1613320098]
 rotation = -0.011463064
 shape = SubResource("CapsuleShape2D_as8jt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1147530953]
+texture_filter = 1
+position = Vector2(5.833335, -20.666668)
+scale = Vector2(0.9972223, 1)
+sprite_frames = SubResource("SpriteFrames_l6gn3")
+animation = &"death"

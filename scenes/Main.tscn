@@ -1,21 +1,116 @@
 [gd_scene format=3 uid="uid://s1u5jtn7gewn"]
 
+[ext_resource type="Script" uid="uid://cwly0gys2g26y" path="res://scripts/Main.gd" id="1_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://ciqluic3lqivo" path="res://scenes/Hunter.tscn" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://e4psbfknxvup" path="res://scenes/Enemy.tscn" id="2_rarhs"]
 [ext_resource type="Texture2D" uid="uid://baq23k1qsgs7g" path="res://assets/sprites/Battleground1.png" id="2_rvslj"]
+[ext_resource type="PackedScene" uid="uid://bbutjsykbbpm3" path="res://scenes/tower.tscn" id="3_c01mt"]
+[ext_resource type="Texture2D" uid="uid://8jy8i1dmryce" path="res://assets/ui/GenericRegeneration-Sheet.png" id="5_vcsgt"]
 
 [sub_resource type="Curve2D" id="Curve2D_rvslj"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1507, 862, 0, 0, 0, 0, -242, 535, 0, 0, 0, 0, -3931.067, -3389, 0, 0, 0, 0, -3798.7896, 56124.984, 0, 0, 0, 0, -3528.356, 114657.984, 0, 0, 0, 0, -2966.9124, 60048.984, 0, 0, 0, 0, -2199.7039, 117600.984, 0, 0, 0, 0, -1432.4956, 77052.984, 0, 0, 0, 0, -968.0553, 110733.984, 0, 0, 0, 0, -485.97803, 85881.984, 0, 0, 0, 0, -474.21997, 179403.97)
+"points": PackedVector2Array(0, 0, 0, 0, 3023.7798, -58652, 0, 0, 0, 0, 1415.8755, -57017, 0, 0, 0, 0, -192.02856, -61268, 0, 0, 0, 0, -1791.114, -60614, 0, 0, 0, 0, -3399.018, -59306, 0, 0, 0, 0, -4965.7695, -58652, 0, 0, 0, 0, -5245.0215, -55709, 0, 0, 0, 0, -5036.3174, -27587, 0, 0, 0, 0, -4904.04, -24971, 0, 0, 0, 0, -4621.848, -13526, 0, 0, 0, 0, -4266.1694, -5351, 0, 0, 0, 0, -3487.2031, -446, 0, 0, 0, 0, -2017.4552, -446, 0, 0, 0, 0, -947.47876, -1754, 0, 0, 0, 0, 213.62183, 1189, 0, 0, 0, 0, 1327.6909, 1843, 0, 0, 0, 0, 2362.393, 208, 0, 0, 0, 0, 2903.2603, 1189, 0, 0, 0, 0, 2650.4639, 41082.984, 0, 0, 0, 0, 2280.0874, 40428.984, 0, 0, 0, 0, 198.92456, 52854.984, 0, 0, 0, 0, -2105.6401, 53508.984, 0, 0, 0, 0, -4098.618, 57759.984, 0, 0, 0, 0, -4765.884, 62010.984, 0, 0, 0, 0, -5092.1675, 65607.984, 0, 0, 0, 0, -5042.1963, 101904.984, 0, 0, 0, 0, -4695.336, 109752.984, 0, 0, 0, 0, -3945.7642, 111060.984, 0, 0, 0, 0, -3252.0435, 115965.984, 0, 0, 0, 0, -2722.934, 114657.984, 0, 0, 0, 0, -2126.2166, 122178.984, 0, 0, 0, 0, -1382.5242, 123813.984, 0, 0, 0, 0, -518.3125, 128718.984, 0, 0, 0, 0, -121.48047, 131988.98, 0, 0, 0, 0, 72.52612, 152589.98, 0, 0, 0, 0, 72.52612, 203601.97)
 }
-point_count = 11
+point_count = 36
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rvslj"]
-size = Vector2(19, 1080.5)
+size = Vector2(19, 1660.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bbpv"]
-size = Vector2(1958, 20)
+size = Vector2(2911, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rarhs"]
+size = Vector2(426.5, 660)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcsgt"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 0, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c01mt"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 16, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxtc6"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 32, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlsqs"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 48, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8u5g"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 64, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhr70"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 80, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp0k4"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 96, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjd11"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 112, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmy6f"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 128, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwfav"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 144, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxlcp"]
+atlas = ExtResource("5_vcsgt")
+region = Rect2(0, 272, 64, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ebg2g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcsgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c01mt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxtc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlsqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8u5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhr70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp0k4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjd11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmy6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwfav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxlcp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1337728804]
+script = ExtResource("1_0bbpv")
+enemy_scene = ExtResource("2_rarhs")
+tower_scene = ExtResource("3_c01mt")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=143277322]
 position = Vector2(616, 304)
@@ -43,26 +138,78 @@ curve = SubResource("Curve2D_rvslj")
 position = Vector2(-394, 137)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=678086010]
-position = Vector2(-445, -123)
+position = Vector2(-445, 166.875)
 shape = SubResource("RectangleShape2D_rvslj")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=741871380]
 position = Vector2(1549, 138)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1832906831]
-position = Vector2(0, 241.5)
+position = Vector2(529, 166)
 shape = SubResource("RectangleShape2D_rvslj")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1381620233]
 position = Vector2(313, 279)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=425594193]
-position = Vector2(265, 652)
+position = Vector2(295, 849)
 shape = SubResource("RectangleShape2D_0bbpv")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=768224767]
 position = Vector2(626, 558)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=479385122]
-position = Vector2(-55, -257)
+position = Vector2(-9, -362)
 shape = SubResource("RectangleShape2D_0bbpv")
+
+[node name="Base" type="Area2D" parent="." unique_id=300575731]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base" unique_id=12232213]
+position = Vector2(971.25, -92)
+shape = SubResource("RectangleShape2D_rarhs")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1540432554]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HUD" unique_id=1523221202]
+texture_filter = 1
+position = Vector2(1000, 50)
+scale = Vector2(2.393, 2)
+sprite_frames = SubResource("SpriteFrames_ebg2g")
+animation = &"idle"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD" unique_id=537434076]
+offset_right = 66.0
+offset_bottom = 53.0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/HBoxContainer" unique_id=1745253941]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HUD/HBoxContainer" unique_id=1860243538]
+layout_mode = 2
+
+[node name="Label de Oleadas" type="Label" parent="HUD" unique_id=2118995743]
+offset_left = 600.0
+offset_top = 10.0
+offset_right = 693.0
+offset_bottom = 33.0
+text = "Oleada 1/15"
+horizontal_alignment = 1
+
+[node name="Menu de Torres" type="HBoxContainer" parent="HUD" unique_id=1672952664]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_constants/separation = 10
+
+[node name="Torre 01" type="Button" parent="HUD/Menu de Torres" unique_id=1672921731]
+layout_mode = 2
+text = "Torre 1\\n100🩸"
+
+[node name="Torre 02" type="Button" parent="HUD/Menu de Torres" unique_id=1481376690]
+layout_mode = 2
+text = "Torre 2\\n150🩸"
+
+[connection signal="area_entered" from="Base" to="." method="_on_base_area_entered"]
+[connection signal="pressed" from="HUD/Menu de Torres/Torre 01" to="." method="_on_torre_01_pressed"]
+[connection signal="pressed" from="HUD/Menu de Torres/Torre 02" to="." method="_on_torre_02_pressed"]
