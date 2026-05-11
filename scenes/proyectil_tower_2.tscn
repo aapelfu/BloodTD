@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bsyqjfj8hpyga"]
+
+[ext_resource type="Texture2D" uid="uid://da54l0o55ins2" path="res://assets/sprites/towers/tower_02/Tower 02 - Level 01 - Projectile.png" id="1_cvnel"]
+[ext_resource type="Script" uid="uid://c6endi1n0txld" path="res://scripts/proyectil_tower_2.gd" id="1_t2k0e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t2k0e"]
+radius = 21.0
+height = 46.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnel"]
+atlas = ExtResource("1_cvnel")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2k0e"]
+atlas = ExtResource("1_cvnel")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6au8"]
+atlas = ExtResource("1_cvnel")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b83m"]
+atlas = ExtResource("1_cvnel")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1rb2"]
+atlas = ExtResource("1_cvnel")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w1m3e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2k0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6au8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b83m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1rb2")
+}],
+"loop": true,
+"name": &"proyectil",
+"speed": 10.0
+}]
+
+[node name="Proyectil_Tower2" type="Area2D" unique_id=23356746]
+script = ExtResource("1_t2k0e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1425141943]
+shape = SubResource("CapsuleShape2D_t2k0e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1267166711]
+texture_filter = 1
+position = Vector2(2.3841858e-07, -1)
+scale = Vector2(1.96875, 1.96875)
+sprite_frames = SubResource("SpriteFrames_w1m3e")
+animation = &"proyectil"

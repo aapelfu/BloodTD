@@ -3,9 +3,60 @@
 [ext_resource type="Texture2D" uid="uid://bgmwhsjboklte" path="res://assets/sprites/towers/tower_01/Tower 01.png" id="1_2x682"]
 [ext_resource type="Script" uid="uid://dvv2700sgoi2h" path="res://scripts/tower.gd" id="1_ay4al"]
 [ext_resource type="PackedScene" uid="uid://gblfd4hakvxj" path="res://scenes/proyectil.tscn" id="2_ktxwe"]
+[ext_resource type="Texture2D" uid="uid://dytfduw5fpntc" path="res://assets/sprites/towers/tower_01/Tower 01 - Level 01 - Weapon.png" id="4_qrbg1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2x682"]
 radius = 153.0294
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfguu"]
+atlas = ExtResource("4_qrbg1")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85u2j"]
+atlas = ExtResource("4_qrbg1")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xl0gn"]
+atlas = ExtResource("4_qrbg1")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqps3"]
+atlas = ExtResource("4_qrbg1")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfw7u"]
+atlas = ExtResource("4_qrbg1")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8022"]
+atlas = ExtResource("4_qrbg1")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_olwqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfguu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85u2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xl0gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqps3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfw7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8022")
+}],
+"loop": true,
+"name": &"weapon",
+"speed": 5.0
+}]
 
 [node name="Tower" type="Area2D" unique_id=1452240527]
 script = ExtResource("1_ay4al")
@@ -26,3 +77,10 @@ shape = SubResource("CircleShape2D_2x682")
 
 [node name="Timer" type="Timer" parent="." unique_id=591773293]
 autostart = true
+
+[node name="weapon" type="AnimatedSprite2D" parent="." unique_id=1272194783]
+texture_filter = 1
+position = Vector2(37.000008, -111)
+scale = Vector2(1.5416666, 1.5257732)
+sprite_frames = SubResource("SpriteFrames_olwqo")
+animation = &"weapon"

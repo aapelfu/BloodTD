@@ -11,7 +11,7 @@ extends Node2D
 # Estado base
 var path_points: PackedVector2Array
 var base_health = 10
-var blood = 100
+var blood = 300
 
 # Torres
 @export var tower2_scene: PackedScene
@@ -125,4 +125,4 @@ func update_health_bar():
 
 func update_hud():
 	blood_label.text = str(blood) + " 🩸"
-	
+	$HUD/"Label de Oleadas".text = "Oleada " + str(current_wave) + "/15"

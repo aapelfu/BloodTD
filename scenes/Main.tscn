@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://e4psbfknxvup" path="res://scenes/Enemy.tscn" id="2_rarhs"]
 [ext_resource type="Texture2D" uid="uid://baq23k1qsgs7g" path="res://assets/sprites/Battleground1.png" id="2_rvslj"]
 [ext_resource type="PackedScene" uid="uid://bbutjsykbbpm3" path="res://scenes/tower.tscn" id="3_c01mt"]
+[ext_resource type="PackedScene" uid="uid://7gt68pgrlbj" path="res://scenes/tower_2.tscn" id="4_nxtc6"]
 [ext_resource type="Texture2D" uid="uid://8jy8i1dmryce" path="res://assets/ui/GenericRegeneration-Sheet.png" id="5_vcsgt"]
 
 [sub_resource type="Curve2D" id="Curve2D_rvslj"]
@@ -111,6 +112,7 @@ animations = [{
 script = ExtResource("1_0bbpv")
 enemy_scene = ExtResource("2_rarhs")
 tower_scene = ExtResource("3_c01mt")
+tower2_scene = ExtResource("4_nxtc6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=143277322]
 position = Vector2(616, 304)
@@ -178,8 +180,10 @@ sprite_frames = SubResource("SpriteFrames_ebg2g")
 animation = &"idle"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD" unique_id=537434076]
-offset_right = 66.0
-offset_bottom = 53.0
+offset_left = 349.0
+offset_top = 24.0
+offset_right = 416.0
+offset_bottom = 77.0
 
 [node name="TextureRect" type="TextureRect" parent="HUD/HBoxContainer" unique_id=1745253941]
 layout_mode = 2
@@ -188,9 +192,9 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Label de Oleadas" type="Label" parent="HUD" unique_id=2118995743]
-offset_left = 600.0
+offset_left = 350.0
 offset_top = 10.0
-offset_right = 693.0
+offset_right = 443.0
 offset_bottom = 33.0
 text = "Oleada 1/15"
 horizontal_alignment = 1

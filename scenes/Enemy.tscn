@@ -96,7 +96,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_55jtl"]
-radius = 32.804134
+radius = 50.022495
 
 [node name="Area2D" type="Area2D" unique_id=1257903156]
 scale = Vector2(2, 2)
