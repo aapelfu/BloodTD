@@ -24,7 +24,13 @@ func _process(delta):
 func _on_timer_timeout():
 	if target != null and is_instance_valid(target):
 		weapon.play("shoot")
+		weapon.play("weapon")
 		var projectile = projectile_scene.instantiate()
 		get_parent().add_child(projectile)
 		projectile.global_position = global_position
 		projectile.setup(target, damage)
+		
+		# Tower Recoil Juice
+		var tween = create_tween()
+		tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.05)
+		tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.15)
