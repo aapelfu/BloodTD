@@ -1,4 +1,4 @@
-# 🌌 BloodTD: Cosecha Estelar
+# 🌌 BloodTD:
 
 **BloodTD** es un juego de Tower Defense de alta calidad desarrollado íntegramente en **Godot 4**. Sumérgete en un universo de ciencia ficción oscura donde tu misión es defender tu base recolectando la sangre de invasores cósmicos para construir y mejorar tus defensas.
 
