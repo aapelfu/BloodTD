@@ -2,29 +2,15 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 
-@onready var anim = $AnimatedSprite2D
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-func _physics_process(delta: float) -> void:
-	var direction = Vector2.ZERO
-	
-	if Input.is_action_pressed("move_right"):
-		direction.x += 1
-	if Input.is_action_pressed("move_left"):
-		direction.x -= 1
-	if Input.is_action_pressed("move_down"):
-		direction.y += 1
-	if Input.is_action_pressed("move_up"):
-		direction.y -= 1
+func _physics_process(_delta: float) -> void:
+	var direction: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
 	if direction != Vector2.ZERO:
-		direction = direction.normalized()
 		velocity = direction * SPEED
 		anim.play("run")
-		# Girar el sprite según dirección horizontal
-		if direction.x > 0:
-			anim.flip_h = false
-		elif direction.x < 0:
-			anim.flip_h = true
+		anim.flip_h = direction.x < 0
 	else:
 		velocity = Vector2.ZERO
 		anim.play("idle")
